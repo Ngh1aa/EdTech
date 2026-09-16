@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ee" />
+    <title>PATH — Learn what comes next</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#map" aria-label="PATH home"><span class="brand-mark">P</span><span>PATH</span></a>
+        <div class="sidebar-label">YOUR LEARNING</div>
+        <nav class="nav-list" aria-label="Primary navigation">
+          <button class="nav-item active" data-view="map"><span class="nav-icon">⌘</span>Skill map</button>
+          <button class="nav-item" data-view="review"><span class="nav-icon">↻</span>Mistake review <b class="nav-badge">3</b></button>
+          <button class="nav-item" data-view="profile"><span class="nav-icon">◒</span>My progress</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="streak-card"><span class="flame">✦</span><div><strong>4 day streak</strong><small>Keep your rhythm</small></div></div>
+          <button class="profile-chip" data-view="profile"><span class="avatar">AN</span><span><strong>Alex Nguyen</strong><small>UI/UX fundamentals</small></span><span class="chevron">›</span></button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">P</span> PATH</div>
+          <div class="breadcrumbs"><span>UI/UX fundamentals</span><span class="slash">/</span><strong id="crumb">Skill map</strong></div>
+          <div class="top-actions"><button class="icon-button" aria-label="Notifications">⌁<i></i></button><button class="help-button">?</button></div>
+        </header>
+
+        <section class="view active" id="map-view">
+          <div class="page-intro">
+            <div><p class="eyebrow">PERSONALIZED PATH <span class="live-dot"></span></p><h1>See what you know.<br /><em>Choose what’s next.</em></h1><p class="intro-copy">Your path adapts after every answer, so you spend time exactly where it matters.</p></div>
+            <button class="quiet-button" id="diagnosticBtn">Retake diagnostic <span>↗</span></button>
+          </div>
+          <div class="map-toolbar"><div><span class="map-title">Design foundations</span><span class="map-meta">6 skills · 42 min to next milestone</span></div><div class="map-legend"><span><i class="dot mastered"></i> Mastered</span><span><i class="dot active-dot"></i> In progress</span><span><i class="dot locked"></i> Locked</span></div></div>
+          <div class="constellation-wrap">
+            <div class="constellation" role="img" aria-label="Skill constellation from design principles to accessibility">
+              <svg class="map-lines" viewBox="0 0 900 520" preserveAspectRatio="none" aria-hidden="true"><path d="M110 95 C220 95 220 210 330 210 S450 330 565 330 S680 210 790 210"/><path d="M330 210 C375 120 440 115 485 160"/><path d="M565 330 C615 420 700 420 760 370"/><path class="progress-line" d="M110 95 C220 95 220 210 330 210 S450 330 565 330"/></svg>
+              <button class="skill-node mastered-node node-principles" data-skill="principles"><span class="node-ring">✓</span><span class="node-copy"><b>Design principles</b><small>Mastered · 92%</small></span></button>
+              <button class="skill-node active-node node-hierarchy" data-skill="hierarchy"><span class="node-ring">2</span><span class="node-copy"><b>Visual hierarchy</b><small>In progress · 68%</small></span><span class="node-pulse"></span></button>
+              <button class="skill-node ready-node node-typography" data-skill="typography"><span class="node-ring">→</span><span class="node-copy"><b>Typography</b><small>Ready to learn</small></span></button>
+              <button class="skill-node locked-node node-layout" data-skill="layout"><span class="node-ring">⌁</span><span class="node-copy"><b>Layout systems</b><small>Unlocks after typography</small></span></button>
+              <button class="skill-node ready-node node-components" data-skill="components"><span class="node-ring">→</span><span class="node-copy"><b>Components</b><small>Ready to learn</small></span></button>
+              <button class="skill-node locked-node node-accessibility" data-skill="accessibility"><span class="node-ring">⌁</span><span class="node-copy"><b>Accessibility</b><small>2 prerequisites left</small></span></button>
+              <div class="map-caption"><span class="caption-line"></span><span>FOUNDATION</span><span class="caption-line"></span><span>APPLICATION</span></div>
+            </div>
+            <aside class="next-up"><div class="next-label">NEXT UP <span>PERSONALIZED FOR YOU</span></div><div class="next-content"><div class="mini-diagram">H<span>→</span>A</div><div><h3>Visual hierarchy</h3><p>Make the important thing<br />easy to find.</p><div class="next-stats"><span>12 min</span><span>·</span><span>2 activities</span></div></div></div><button class="primary-button" id="startLesson">Continue learning <span>→</span></button><p class="save-note">Your progress is saved automatically</p></aside>
+          </div>
+          <div class="insight-strip"><div class="insight-icon">✦</div><div><b>A small win compounds.</b><span>You’re one practice away from unlocking <strong>Typography</strong>.</span></div><button class="text-button" id="seeWhy">Why this next? <span>↗</span></button></div>
+        </section>
+
+        <section class="view" id="lesson-view"><button class="back-link" data-view="map">← Back to skill map</button><div class="lesson-layout"><div class="lesson-main"><div class="lesson-kicker"><span class="lesson-number">02 / 04</span><span class="lesson-type">CONCEPT</span></div><h2>Hierarchy is a<br /><em>conversation with the eye.</em></h2><p class="lesson-lead">Before someone reads your interface, they scan it. Visual hierarchy tells them where to begin, what matters, and what to do next.</p><div class="visual-lesson"><div class="visual-label">TRY IT IN YOUR HEAD</div><div class="hierarchy-demo"><div class="demo-screen"><span class="demo-tag">A</span><div class="demo-heading">Find your focus</div><div class="demo-body">Every screen has one job.<br />Make it obvious.</div><div class="demo-cta">Start exercise <span>→</span></div></div><div class="demo-annotations"><span class="annotation a1">01 <b>Scale</b><small>Start with the largest signal.</small></span><span class="annotation a2">02 <b>Contrast</b><small>Separate action from context.</small></span><span class="annotation a3">03 <b>Space</b><small>Give ideas room to breathe.</small></span></div></div></div><button class="primary-button lesson-cta" id="lessonPractice">I’m ready to practice <span>→</span></button></div><aside class="lesson-aside"><div class="aside-progress"><span>YOUR PROGRESS</span><strong>68%</strong><div class="progress-bar"><i style="width:68%"></i></div></div><div class="aside-note"><span class="note-mark">“</span><p>Good hierarchy feels less like decoration and more like a quiet guide.</p><small>PATH note · Visual hierarchy</small></div><div class="lesson-outline"><span>IN THIS LESSON</span><b class="done">01 <i>What hierarchy does</i> ✓</b><b class="current">02 <i>Three signals of focus</i></b><b>03 <i>Practice: find the focus</i></b><b>04 <i>Quick reflection</i></b></div></aside></div></section>
+
+        <section class="view" id="practice-view"><button class="back-link" data-view="lesson">← Back to lesson</button><div class="practice-header"><div><p class="eyebrow">PRACTICE · VISUAL HIERARCHY</p><h2>Which version makes the<br /><em>primary action clearest?</em></h2></div><div class="question-count">01 <span>/ 02</span></div></div><div class="practice-question"><p class="question-prompt">A user needs to quickly start a new project. Which card guides their attention best?</p><div class="answer-grid"><button class="answer-card" data-answer="wrong"><span class="answer-label">A</span><div class="answer-ui muted-ui"><small>PROJECTS</small><b>New project</b><span>Start from scratch or use a template</span><i>Open</i></div></button><button class="answer-card" data-answer="correct"><span class="answer-label">B</span><div class="answer-ui focused-ui"><small>PROJECTS</small><b>New project <strong>→</strong></b><span>Start from scratch or use a template</span><i>Make something new</i></div></button></div><p class="answer-hint">Select an answer to continue <span>↗</span></p></div></section>
+
+        <section class="view" id="feedback-view"><div class="feedback-layout"><div class="feedback-mark">×</div><p class="eyebrow">NOT QUITE YET · THAT’S USEFUL</p><h2>Your instinct was close.<br /><em>Here’s what the eye noticed.</em></h2><p class="feedback-lead">The action in <strong>version A</strong> has the same visual weight as the supporting content. When everything speaks equally loudly, nothing leads.</p><div class="feedback-compare"><div class="compare-card"><span class="compare-label">YOUR PICK · A</span><div class="compare-ui muted-ui"><small>PROJECTS</small><b>New project</b><span>Start from scratch or use a template</span><i>Open</i></div><p><b>What happened</b> “Open” blends into the card instead of creating a clear next step.</p></div><div class="compare-card correct-compare"><span class="compare-label">A CLEARER SIGNAL · B</span><div class="compare-ui focused-ui"><small>PROJECTS</small><b>New project <strong>→</strong></b><span>Start from scratch or use a template</span><i>Make something new</i></div><p><b>Why it works</b> Scale, contrast, and space agree on one action.</p></div></div><button class="primary-button" id="recoveryBtn">Try a targeted recovery exercise <span>→</span></button><button class="subtle-button" data-view="map">Return to my path</button></div></section>
+
+        <section class="view" id="recovery-view"><div class="recovery-layout"><div class="recovery-copy"><p class="eyebrow">TARGETED RECOVERY · 03 MIN</p><h2>Give one idea<br /><em>the room to lead.</em></h2><p>Adjust the card so the primary action is unmistakable. You only need to change one thing.</p><div class="recovery-tip"><span>✦</span><div><b>Try increasing the contrast</b><small>The eye follows the strongest difference first.</small></div></div><button class="primary-button" id="masterBtn">Apply correction <span>→</span></button></div><div class="recovery-stage"><span class="stage-label">BEFORE <i>→</i> AFTER</span><div class="repair-card"><div class="repair-top"><span>PROJECTS</span><span>•••</span></div><h3>New project</h3><p>Start from scratch or use a template</p><button id="repairAction">Make something new <span>→</span></button><div class="repair-cursor">↗</div></div><div class="stage-foot"><span>Drag the signal</span><span>1 adjustment left</span></div></div></div></section>
+
+        <section class="view" id="mastery-view"><div class="mastery-layout"><div class="mastery-orbit"><div class="orbit-ring ring-1"></div><div class="orbit-ring ring-2"></div><div class="mastery-core"><span>✓</span><small>MASTERED</small><b>Visual<br />hierarchy</b></div><i class="orbit-dot od-1"></i><i class="orbit-dot od-2"></i><i class="orbit-dot od-3"></i></div><div class="mastery-copy"><p class="eyebrow">SKILL MILESTONE · 02 / 06</p><h2>You can now see<br /><em>what matters first.</em></h2><p>That’s the difference between making something look good and making it easy to use.</p><div class="unlock-card"><span>✦</span><div><b>New skill unlocked</b><strong>Typography</strong><small>Ready when you are · 15 min</small></div><button class="primary-button" id="nextSkill">Start next skill <span>→</span></button></div><button class="text-button" data-view="map">View updated skill map <span>↗</span></button></div></div></section>
+
+        <section class="view" id="review-view"><div class="simple-heading"><p class="eyebrow">MISTAKE REVIEW · 3 ITEMS</p><h2>Turn friction<br /><em>into fluency.</em></h2><p>Short, targeted reviews based on the moments you hesitated.</p></div><div class="review-list"><button class="review-item" data-view="practice"><span class="review-index">01</span><div><b>Visual hierarchy</b><small>Choosing one primary action · 2 days ago</small></div><span class="review-arrow">→</span></button><button class="review-item"><span class="review-index">02</span><div><b>Spacing & rhythm</b><small>Finding the right breathing room · 4 days ago</small></div><span class="review-arrow">→</span></button><button class="review-item"><span class="review-index">03</span><div><b>Contrast & emphasis</b><small>Making secondary content quiet · 7 days ago</small></div><span class="review-arrow">→</span></button></div></section>
+
+        <section class="view" id="profile-view"><div class="simple-heading"><p class="eyebrow">YOUR PROGRESS</p><h2>Learning that<br /><em>leaves a trace.</em></h2><p>Not a score. A clearer picture of what you can do now.</p></div><div class="profile-grid"><div class="profile-stat"><span>SKILLS MASTERED</span><strong>1</strong><small>of 6 in Design foundations</small></div><div class="profile-stat accent-stat"><span>THIS WEEK</span><strong>68<span>%</span></strong><small>Visual hierarchy progress</small></div><div class="profile-stat"><span>LEARNING RHYTHM</span><strong>4 <span>days</span></strong><small>Longest streak: 8 days</small></div></div><div class="profile-path"><div class="path-head"><b>Design foundations</b><span>17% complete</span></div><div class="path-progress"><i style="width:17%"></i></div><div class="path-skills"><span class="complete">✓ Principles</span><span class="current">◐ Hierarchy</span><span>○ Typography</span><span>○ Layout</span><span>○ Components</span><span>○ Accessibility</span></div></div></section>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
